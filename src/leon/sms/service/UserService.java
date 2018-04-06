@@ -1,4 +1,5 @@
 package leon.sms.service;
+
 /** 
 * @author Leon
 * @date 创建时间：2018年4月5日 下午3:54:51
@@ -8,9 +9,28 @@ package leon.sms.service;
 */
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import leon.sms.mapper.UserMapper;
 import leon.sms.pojo.User;
 
-public interface UserService
+@Service
+public class UserService
 {
-	List<User> list();
+	@Autowired
+	UserMapper userMapper;
+
+	public boolean search(User user)
+	{
+		List<User> list = userMapper.list();
+		for(int i=0 ;i<list.size();i++)
+		{
+			if(list.get(i).equals(user))
+			{
+				return true;
+			}
+		}
+		return false;
+	}
 }

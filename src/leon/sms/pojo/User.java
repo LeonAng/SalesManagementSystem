@@ -1,4 +1,5 @@
 package leon.sms.pojo;
+
 /** 
 * @author Leon
 * @date 创建时间：2018年4月5日 下午3:37:20
@@ -9,8 +10,13 @@ package leon.sms.pojo;
 public class User
 {
 	private String name;
-	private String keyword;
-	
+	private String passWord;
+	private boolean isAdmin;
+	private int projectsNum;
+
+	public User()
+	{
+	}
 	public String getName()
 	{
 		return name;
@@ -19,18 +25,46 @@ public class User
 	{
 		this.name = name;
 	}
-	public String getKeyword()
+	public String getPassWord()
 	{
-		return keyword;
+		return passWord;
 	}
-	public void setKeyword(String keyword)
+	public void setPassWord(String passWord)
 	{
-		this.keyword = keyword;
+		this.passWord = passWord;
 	}
+	public boolean isAdmin()
+	{
+		return isAdmin;
+	}
+	public void setAdmin(boolean isAdmin)
+	{
+		this.isAdmin = isAdmin;
+	}
+	public int getProjectsNum()
+	{
+		return projectsNum;
+	}
+	public void setProjectsNum(int projectsNum)
+	{
+		this.projectsNum = projectsNum;
+	}
+	public boolean equals(User user)
+	{
+		if (this.name.equals(user.getName()) && this.passWord.equals(user.getPassWord()))
+		{
+			return true;
+		}
+		else
+		{
+			return false;
+		}
+	}
+
 	@Override
 	public String toString()
 	{
-		return "User [name=" + name + ", keyword=" + keyword + "]";
+		return "User [name=" + name + ", passWord=" + passWord + ", isAdmin=" + isAdmin + ", projectsNum=" + projectsNum
+				+ "]";
 	}
-	
 }

@@ -2,39 +2,41 @@ package leon.sms.controller;
 
 import java.util.List;
 
-/** 
-* @author Leon
-* @date 创建时间：2018年4月5日 下午4:00:38
-* @version 1.0
-* 类说明 :
-* 
-*/
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
+import leon.sms.mapper.UserMapper;
 import leon.sms.pojo.User;
 import leon.sms.service.UserService;
 
+/** 
+* @author Leon
+* @date 创建时间：2018年4月6日 下午6:59:16
+* @version 1.0
+* 类说明 :
+* 
+*/
 @Controller
 @RequestMapping("")
-public class UserController
+public class TestConnection
 {
 	@Autowired
 	UserService userService;
+	@Autowired
+	UserMapper userMapper;
 
-	@RequestMapping("listusers")
+	@RequestMapping("test")
 	public ModelAndView listUser()
 	{
 		ModelAndView mav = new ModelAndView();
-		List<User> users = userService.list();
-
-		
-		// 放入转发参数
-		mav.addObject("users", users);
-		// 放入jsp路径
-		mav.setViewName("showUsers");
+		List<User> list = userMapper.list();
+		for(int i=0 ;i<list.size();i++)
+		{
+			System.out.println(list.get(i).toString());
+		}
+		mav.setViewName("user/loginFailure");
 		return mav;
 	}
 }

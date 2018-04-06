@@ -5,7 +5,7 @@
  
     <mapper namespace="leon.sms.mapper.UserMapper">
         <insert id="add" parameterType="User" >
-            insert into users (name,keyword) values (#{name},#{keyword})   
+            insert into users (name,password) values (#{name},#{password})   
         </insert>
          
         <delete id="delete" parameterType="User" >
@@ -17,7 +17,7 @@
         </select>
  
         <update id="update" parameterType="User" >
-            update users set keyword=#{keyword} where name=#{name}   
+            update users set password=#{password} where name=#{name}   
         </update>
         <select id="list" resultType="User">
             select * from users     
