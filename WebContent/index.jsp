@@ -11,7 +11,7 @@
 </script>
 </head>
 
-<body>
+<body background="img/login.jpg" style="background-size: cover;">
 <form action="login" class="form-horizontal" method="post">
 	<div class="col-md-4 col-md-offset-4">
 		<div class="col-md-9 col-md-offset-3">
