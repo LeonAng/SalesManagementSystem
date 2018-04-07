@@ -16,6 +16,15 @@ public class User
 
 	public User()
 	{
+		super();
+	}
+	public User(String name, String passWord, boolean isAdmin, int projectsNum)
+	{
+		super();
+		this.name = name;
+		this.passWord = passWord;
+		this.isAdmin = isAdmin;
+		this.projectsNum = projectsNum;
 	}
 	public String getName()
 	{

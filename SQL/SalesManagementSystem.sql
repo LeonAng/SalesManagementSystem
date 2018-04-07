@@ -67,9 +67,9 @@ create table If Not Exists instructions
 insert into instructions values(null,"admin","leon","好好干活");
 
 /*每日销售跟单次数*/
-create table If Not Exists adtionforday
+create table If Not Exists actionforday
 (
 	saledate date primary key NOT NULL,
 	number int
 );
-insert into adtionforday values("2018-01-02",2);
+insert into actionforday values("2018-01-02",2);
