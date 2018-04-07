@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="gbk"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+    
+<mapper namespace="leon.sms.mapper.ActionForDayMapper">
+	<insert id="add" parameterType="leon.sms.pojo.ActionForDay">
+		insert into actionforday (saledate,number)
+		values (#{saleDate},#{number})
+	</insert>
+
+	<delete id="delete" parameterType="java.sql.Date">
+		delete from actionforday where saledate=
+		#{date}
+	</delete>
+
+	<select id="get" parameterType="java.sql.Date" resultType="leon.sms.pojo.ActionForDay">
+		select * from
+		actionforday where saledate= #{date}
+	</select>
+	
+	<update id="update" parameterType="leon.sms.pojo.ActionForDay">
+		update actionforday set
+		number=#{number} where saledate= #{date}
+	</update>
+	
+	<select id="list" resultType="leon.sms.pojo.ActionForDay">
+		select * from actionforday
+	</select>
+</mapper>

@@ -6,19 +6,19 @@ package leon.sms.pojo;
 * ภเหตร๗ :
 * 
 */
-public class instruction
+public class Instruction
 {
 	private int id;
 	private String staffName;
 	private String managerName;
 	private String content;
 	
-	public instruction()
+	public Instruction()
 	{
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	public instruction(int id, String staffName, String managerName, String content)
+	public Instruction(int id, String staffName, String managerName, String content)
 	{
 		super();
 		this.id = id;

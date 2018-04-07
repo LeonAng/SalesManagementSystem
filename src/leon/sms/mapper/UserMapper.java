@@ -12,15 +12,15 @@ import leon.sms.pojo.User;
 
 public interface UserMapper
 {
-	 public void add(User user); 
-     
-	    public void delete(int id); 
-	        
-	    public User get(int id); 
-	      
-	    public void update(User category);  
-	        
-	    public List<User> list();
-	     
-	    public int count();  
+	public void add(User user);
+
+	public void delete(int id);
+
+	public User get(int id);
+
+	public void update(User category);
+
+	public List<User> list();
+
+	public int count();
 }

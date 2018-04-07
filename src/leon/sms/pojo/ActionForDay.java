@@ -1,7 +1,6 @@
 package leon.sms.pojo;
 
 import java.sql.Date;
-
 /** 
 * @author Leon
 * @date 创建时间：2018年4月7日 下午12:39:49
@@ -9,16 +8,16 @@ import java.sql.Date;
 * 类说明 :
 * 
 */
-public class actionForDay
+public class ActionForDay
 {
 	private Date saleDate;
 	private int number;
-	public actionForDay()
+	public ActionForDay()
 	{
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	public actionForDay(Date saleDate, int number)
+	public ActionForDay(Date saleDate, int number)
 	{
 		super();
 		this.saleDate = saleDate;

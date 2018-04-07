@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="gbk"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="leon.sms.mapper.GoodsMapper">
+	<insert id="add" parameterType="leon.sms.pojo.Goods">
+		insert into goods
+		(name,number,unitprice)
+		values (#{name},#{number},#{unitPrice})
+	</insert>
+
+	<delete id="delete" parameterType="String">
+		delete from goods where
+		name=#{name}
+	</delete>
+
+	<select id="get" parameterType="String" resultType="leon.sms.pojo.Goods">
+		select * from
+		goods where name= #{name}
+	</select>
+
+	<update id="update" parameterType="leon.sms.pojo.Goods">
+		update goods set
+		number=#{number}, unitprice=#{unitPrice}
+		where name= #{name}
+	</update>
+
+	<select id="list" resultType="leon.sms.pojo.Goods">
+		select * from goods
+	</select>
+</mapper>
+    

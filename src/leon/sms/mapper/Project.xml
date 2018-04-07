@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="gbk"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="leon.sms.mapper.ProjectMapper">
+	<insert id="add" parameterType="leon.sms.pojo.Project">
+		insert into projects
+		(id,name,staffname,clientname,goodsname,goodsnumber,state,startdate,enddate,plan)
+		values
+		(#{id},#{name},#{staffName},#{clientName},#{goodsName},#{goodsNumber},#{state},#{startDate},#{endDate},#{plan})
+	</insert>
+
+	<delete id="delete" parameterType="int">
+		delete from projects where
+		id =
+		#{id}
+	</delete>
+
+	<select id="get" parameterType="int" resultType="leon.sms.pojo.Project">
+		select * from
+		projects where id= #{id}
+	</select>
+
+	<update id="update" parameterType="leon.sms.pojo.Project">
+		update projects set
+		name=#{name},staffname=#{staffName},clientname=#{clientName},
+		goodsname=#{goodsName},goodsnumber=#{goodsNumber},state=#{state},
+		startdate=#{startDate},enddate=#{endDate},plan=#{plan}
+		where id= #{id}
+	</update>
+
+	<select id="list" resultType="leon.sms.pojo.Project">
+		select * from projects
+	</select>
+</mapper>
+    
