@@ -18,6 +18,12 @@ public class User
 	{
 		super();
 	}
+	public User(String name, String passWord)
+	{
+		super();
+		this.name = name;
+		this.passWord = passWord;
+	}
 	public User(String name, String passWord, boolean isAdmin, int projectsNum)
 	{
 		super();

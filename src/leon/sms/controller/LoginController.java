@@ -27,16 +27,16 @@ public class LoginController
 	public ModelAndView listUser(@RequestParam("name")String name,  
             @RequestParam("password")String password)
 	{
-		//User user= new User(name,password);
+		User user= new User(name,password);
 		ModelAndView mav = new ModelAndView();
-		/*if(userService.search(user))
+		if(userService.search(user))
 		{
-			mav.addObject("user", user.getName());
+			mav.addObject("user", user);
 			mav.setViewName("home/fmain");
 			return mav;
-		}*/
+		}
 		
-		mav.setViewName("home/fmain");
+		mav.setViewName("user/loginFailure");
 		return mav;
 	}
 }

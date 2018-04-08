@@ -14,9 +14,9 @@ public interface UserMapper
 {
 	public void add(User user);
 
-	public void delete(int id);
+	public void delete(String name);
 
-	public User get(int id);
+	public User get(String name);
 
 	public void update(User category);
 
