@@ -18,13 +18,13 @@ import leon.sms.service.UserService;
 */
 @Controller
 @RequestMapping("")
-public class LoginController
+public class UserController
 {
 	@Autowired
 	UserService userService;
 	
 	@RequestMapping("login")
-	public ModelAndView listUser(@RequestParam("name")String name,  
+	public ModelAndView loginUser(@RequestParam("name")String name,  
             @RequestParam("password")String password)
 	{
 		User user= new User(name,password);
@@ -36,6 +36,30 @@ public class LoginController
 			return mav;
 		}
 		
+		mav.setViewName("user/loginFailure");
+		return mav;
+	}
+	
+	@RequestMapping("registe")
+	public ModelAndView registeUser(@RequestParam("name")String name,  
+            @RequestParam("password")String passWord,@RequestParam("identity")String identity)
+	{
+		boolean isAdmin = false;
+		if("manager".equals(identity))
+		{
+			isAdmin=true;
+		}
+		User user= new User(name,passWord,isAdmin);
+		ModelAndView mav = new ModelAndView();
+		
+		if(userService.addUser(user))
+		{
+			System.out.println("×¢²á³É¹¦");
+		}
+		else
+		{
+			System.out.println("×¢²áÊ§°Ü");
+		}
 		mav.setViewName("user/loginFailure");
 		return mav;
 	}

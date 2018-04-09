@@ -24,14 +24,25 @@ public class UserService
 	public boolean search(User user)
 	{
 		List<User> list = userMapper.list();
-		for(int i=0 ;i<list.size();i++)
+		for (int i = 0; i < list.size(); i++)
 		{
-			if(list.get(i).equals(user))
+			if (list.get(i).equals(user))
 			{
-				user=userMapper.get(user.getName());
+				user = userMapper.get(user.getName());
 				System.out.println(user.toString());
 				return true;
 			}
+		}
+		return false;
+	}
+
+	public boolean addUser(User user)
+	{
+		if (userMapper.get(user.getName()) == null)
+		{
+			//System.out.println("hello");
+			userMapper.add(user);
+			return true;
 		}
 		return false;
 	}

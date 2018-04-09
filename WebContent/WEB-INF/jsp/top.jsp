@@ -23,7 +23,7 @@ body {
 				<a href="#">欢迎你, ${curUser.name }</a> 
 				<!-- <a href="#">欢迎你, leon</a> -->
 			</li>
-			<li><a href="logout"><span class="glyphicon glyphicon-user"></span>
+			<li><a href="registe.jsp"><span class="glyphicon glyphicon-user"></span>
 					注册</a></li>
 			<li><a href="logout"><span
 					class="glyphicon glyphicon-log-in"></span> 退出</a></li>

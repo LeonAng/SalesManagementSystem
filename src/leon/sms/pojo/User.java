@@ -24,13 +24,13 @@ public class User
 		this.name = name;
 		this.passWord = passWord;
 	}
-	public User(String name, String passWord, boolean isAdmin, int projectsNum)
+	public User(String name, String passWord, boolean isAdmin)
 	{
 		super();
 		this.name = name;
 		this.passWord = passWord;
 		this.isAdmin = isAdmin;
-		this.projectsNum = projectsNum;
+		this.projectsNum = 0;
 	}
 	public String getName()
 	{

@@ -3,22 +3,22 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
 <head>
-<title>用户登陆</title>
-<script type="text/javascript">
+<title>用户注册</title>
+<!-- <script type="text/javascript">
     if(self.location!=top.location){
          top.location=self.location;
     }
-</script>
+</script> -->
 </head>
 
 <body background="img/login.jpg" style="background-size: cover;">
-<form action="login" class="form-horizontal" method="post">
+<form action="registe" class="form-horizontal" method="post">
 	<div class="col-md-4 col-md-offset-4">
 		<div class="col-md-9 col-md-offset-3">
 			<h1 class="text-primary">&nbsp;销售管理系统</h1>
 		</div>
 		<div class="col-md-10 col-md-offset-3" style="margin-bottom: 20px">
-			<h4>———— 用户登陆 ————</h4>
+			<h4>———— 用户注册 ————</h4>
 		</div>
 		
 		<div class="form-group">
@@ -38,18 +38,15 @@
 		<div class="form-group">
 			<div class="col-md-10 col-md-offset-4">
 				<div class="checkbox">
-					<label><input type="checkbox"> 请记住我</label>
+					<label><input name="identity" type="radio" value="manager" />我是经理 </label>
+					<label><input name="identity" type="radio" value="staff" />我是销售人员</label>
 				</div>
 			</div>
 		</div>
+		
 		<div class="form-group">
 			<div class="col-md-3 col-md-offset-4 ">
-				<a href="registe.jsp" class="btn btn-default">
-					注册
-				</a>
-			</div>
-			<div class="col-md-3">
-				<button type="submit" class="btn btn-default">登录</button>
+				<button class="btn btn-default">确认注册</button>
 			</div>
 		</div>
 	</div>
