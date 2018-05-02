@@ -1,5 +1,5 @@
 <%@ page contentType="text/html; charset=utf-8"%>
-<%@ include file="../base.jsp"%>
+<%@ include file="../../base.jsp"%>
 <html>
 <head>
 </head>

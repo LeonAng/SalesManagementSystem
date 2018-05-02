@@ -34,12 +34,13 @@ body{
 	<div style="padding: 10px;padding-left">
 		<ul class="nav nav-pills nav-stacked">
 			<li id="clock" style="font-size: 20px;margin-left: 30px;"></li>
-			
+
 			<li id="li1" onclick="changeStyle('li1')" class="active"><a
-				href="#">企业文化</a></li>
-			<li id="li2" onclick="changeStyle('li2')"><a href="#">员工销售跟单</a></li>
-			<li id="li3" onclick="changeStyle('li3')"><a href="#">经理指导意见</a></li>
-			<!-- <li id="li4" onclick="changeStyle('li4')"><a href="#">个人信息修改</a></li> -->
+				href="homeMain" target="mainFrame">企业文化</a></li>
+			<li id="li2" onclick="changeStyle('li2')"><a href="staffDocumentary"
+				target="mainFrame">员工销售跟单</a></li>
+			<li id="li3" onclick="changeStyle('li3')"><a href="instructions"
+				target="mainFrame">经理指导意见</a></li>
 		</ul>
 	</div>
 </body>

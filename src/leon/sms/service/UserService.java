@@ -21,7 +21,7 @@ public class UserService
 	@Autowired
 	UserMapper userMapper;
 
-	public boolean search(User user)
+	public User search(User user)
 	{
 		List<User> list = userMapper.list();
 		for (int i = 0; i < list.size(); i++)
@@ -29,11 +29,10 @@ public class UserService
 			if (list.get(i).equals(user))
 			{
 				user = userMapper.get(user.getName());
-				//System.out.println(user.toString());
-				return true;
+				return user;
 			}
 		}
-		return false;
+		return null;
 	}
 
 	public boolean addUser(User user)

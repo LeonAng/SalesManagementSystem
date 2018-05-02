@@ -36,12 +36,12 @@ public class UserController
 	{
 		User user= new User(name,password);
 		ModelAndView mav = new ModelAndView();
-		if(userService.search(user))
+		if(userService.search(user)!=null)
 		{
 			//将数据存储到session中
-			httpSession.setAttribute("user",user);
+			httpSession.setAttribute("user",userService.search(user));
 			
-			System.out.println(user.toString());
+			System.out.println(userService.search(user).toString());
 			mav.setViewName("home/fmain");
 			return mav;
 		}
