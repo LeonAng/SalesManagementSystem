@@ -29,7 +29,7 @@ public class UserService
 			if (list.get(i).equals(user))
 			{
 				user = userMapper.get(user.getName());
-				System.out.println(user.toString());
+				//System.out.println(user.toString());
 				return true;
 			}
 		}

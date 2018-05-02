@@ -28,5 +28,9 @@
         <servlet-name>mvc-dispatcher</servlet-name>
         <url-pattern>/</url-pattern>
     </servlet-mapping>
-     
+    
+    <!-- session 60分钟失效 -->
+    <session-config>
+    	<session-timeout>30</session-timeout>
+    </session-config>
 </web-app>

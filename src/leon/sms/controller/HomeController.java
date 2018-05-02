@@ -1,8 +1,12 @@
 package leon.sms.controller;
 
+import javax.servlet.http.HttpSession;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
+
+import leon.sms.pojo.User;
 
 /** 
 * @author Leon
@@ -24,10 +28,19 @@ public class HomeController
 	}
 	
 	@RequestMapping("homeLeft")
-	public ModelAndView homeLeft()
+	public ModelAndView homeLeft(HttpSession httpSession)
 	{
 		ModelAndView mav = new ModelAndView();
-		mav.setViewName("home/left");
+		
+		User user = (User) httpSession.getAttribute("user");
+		if(user.isAdmin())//销售经理
+		{
+			mav.setViewName("home/adminLeft");
+		}
+		else//普通员工
+		{
+			mav.setViewName("home/staffLeft");
+		}
 		return mav;
 	}
 	
