@@ -27,8 +27,8 @@
 		where id= #{id}
 	</update>
 
-	<select id="list" resultType="leon.sms.pojo.Instruction">
-		select * from instructions
+	<select id="list" parameterType="String" resultType="leon.sms.pojo.Instruction">
+		select * from instructions where staffname=#{staffName}
 	</select>
 </mapper>
     

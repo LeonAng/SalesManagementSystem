@@ -18,7 +18,7 @@ public interface ProjectMapper
 
 	public Project get(int id);
 
-	public void update(int id);
+	public void update(Project project);
 
 	public List<Project> list();
 

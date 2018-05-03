@@ -34,6 +34,8 @@ public class UserController
 	public ModelAndView loginUser(@RequestParam("name")String name,  
             @RequestParam("password")String password, HttpSession httpSession)
 	{
+		//System.out.println(name + " "+ password);
+		
 		User user= new User(name,password);
 		ModelAndView mav = new ModelAndView();
 		if(userService.search(user)!=null)

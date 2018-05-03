@@ -20,7 +20,7 @@ public interface InstructionMapper
 
 	public void update(int id);
 
-	public List<Instruction> list();
+	public List<Instruction> list(String staffName);
 
 	public int count();
 }

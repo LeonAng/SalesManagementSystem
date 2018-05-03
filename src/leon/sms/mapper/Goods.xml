@@ -22,7 +22,7 @@
 
 	<update id="update" parameterType="leon.sms.pojo.Goods">
 		update goods set
-		number=#{number}, unitprice=#{unitPrice}
+		number=#{number}<!-- , unitprice=#{unitPrice} -->
 		where name= #{name}
 	</update>
 

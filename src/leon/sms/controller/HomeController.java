@@ -9,6 +9,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
+import leon.sms.mapper.InstructionMapper;
+import leon.sms.pojo.Instruction;
 import leon.sms.pojo.Project;
 import leon.sms.pojo.User;
 import leon.sms.service.ProjectService;
@@ -26,6 +28,8 @@ public class HomeController
 {
 	@Autowired
 	ProjectService projectService;
+	@Autowired
+	InstructionMapper instructionMapper;
 	
 	@RequestMapping("homeTitle")
 	public ModelAndView homeTitle()
@@ -75,10 +79,13 @@ public class HomeController
 	}
 	
 	@RequestMapping("instructions")
-	public ModelAndView instructions()
+	public ModelAndView instructions(HttpSession httpSession)
 	{
 		ModelAndView mav = new ModelAndView();
 		mav.setViewName("home/mainFrame/instructions");
+		List<Instruction> list = instructionMapper.list(((User)httpSession.getAttribute("user")).getName());
+		mav.addObject("list", list);
+		
 		return mav;
 	}
 	
@@ -87,6 +94,10 @@ public class HomeController
 	{
 		ModelAndView mav = new ModelAndView();
 		mav.setViewName("home/mainFrame/analysis");
+		
+		
+		
+		
 		return mav;
 	}
 	

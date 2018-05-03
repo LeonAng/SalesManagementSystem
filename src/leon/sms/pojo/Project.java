@@ -29,7 +29,7 @@ public class Project
 	}
 
 	public Project(int id, String name, String staffName, String clientName, String goodsName, int goodsNumber,
-			String state, Date startDate, Date endDate, String plan)
+			String state, String startDate, String endDate, String plan)
 	{
 		super();
 		this.id = id;
@@ -39,8 +39,54 @@ public class Project
 		this.goodsName = goodsName;
 		this.goodsNumber = goodsNumber;
 		this.state = state;
-		this.startDate = startDate;
-		this.endDate = endDate;
+		if (startDate != null && startDate != "")
+		{
+			this.startDate = java.sql.Date.valueOf(startDate);
+		}
+		else
+		{
+			this.startDate = null;
+		}
+		if (endDate != null && endDate != "")
+		{
+			this.endDate = java.sql.Date.valueOf(endDate);
+		}
+		else
+		{
+			this.endDate = null;
+		}
+		
+		this.plan = plan;
+	}
+
+
+	public Project(String name, String staffName, String clientName, String goodsName, int goodsNumber, String state,
+			String startDate, String endDate, String plan)
+	{
+		super();
+		this.name = name;
+		this.staffName = staffName;
+		this.clientName = clientName;
+		this.goodsName = goodsName;
+		this.goodsNumber = goodsNumber;
+		this.state = state;
+		if (startDate != null && startDate != "")
+		{
+			this.startDate = java.sql.Date.valueOf(startDate);
+		}
+		else
+		{
+			this.startDate = null;
+		}
+		if (endDate != null && endDate != "")
+		{
+			this.endDate = java.sql.Date.valueOf(endDate);
+		}
+		else
+		{
+			this.endDate = null;
+		}
+		
 		this.plan = plan;
 	}
 

@@ -18,7 +18,7 @@ public interface GoodsMapper
 
 	public Goods get(String name);
 
-	public void update(String name);
+	public void update(Goods goods);
 
 	public List<Goods> list();
 
