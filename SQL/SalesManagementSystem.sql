@@ -18,10 +18,10 @@ create table If Not Exists clients
 (
 	name varchar(10) primary key not null,
 	phonenumber varchar(12),
-	projectsnum int/*完成的订单数*/
+	/*projectsnum int/*完成的订单数*/*/
 );
-insert into clients values("tom","13811110000",2);
-insert into clients values("jerry","13900001111",5);
+insert into clients values("tom","13811110000");
+insert into clients values("jerry","13900001111");
 
 /*商品*/
 create table If Not Exists goods

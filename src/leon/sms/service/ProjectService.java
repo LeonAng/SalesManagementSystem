@@ -35,4 +35,9 @@ public class ProjectService
 		}
 		return result;
 	}
+	public List<Project> getAll()
+	{
+		List<Project> list = projectMapper.list();
+		return list;
+	}
 }

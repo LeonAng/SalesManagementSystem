@@ -20,7 +20,7 @@ public interface ActionForDayMapper
 
 	public ActionForDay get(Date date);
 
-	public void update(Date date);
+	public void update(ActionForDay actionForDay);
 
 	public List<ActionForDay> list();
 

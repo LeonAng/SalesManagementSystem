@@ -19,9 +19,9 @@
 		users where name= #{name}
 	</select>
 
-	<update id="update" parameterType="String">
+	<update id="update" parameterType="leon.sms.pojo.User">
 		update users set
-		password=#{passWord} ,isadmin=#{isAdmin},projectsnum=#{projectsNum}
+		projectsnum=#{projectsNum}
 		where name=#{name}
 	</update>
 

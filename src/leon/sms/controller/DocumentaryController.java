@@ -47,8 +47,7 @@ public class DocumentaryController
 		synchronized (this)
 		{
 			projectMapper.update(project);
-			System.out.println("sdsd");
-			documentaryService.changeGoodsNum(project);
+			documentaryService.change(project);
 		}
 	
 		
@@ -70,7 +69,7 @@ public class DocumentaryController
 		synchronized(this)
 		{
 			projectMapper.add(project);
-			documentaryService.changeGoodsNum(project);
+			documentaryService.change(project);
 		}
 		
 		return mav;

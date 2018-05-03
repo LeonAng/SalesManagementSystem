@@ -67,7 +67,7 @@
 					<label class="col-md-4 control-label" style="width:114px;float:left;">负责人：</label>
 					<div class="col-md-8" style="float: left">
 						<input type="text" class="form-control" name="staffName" value=""
-							placeholder="#">
+							placeholder="#" readonly="readonly">
 					</div>
 					<br><br>
 					
@@ -186,8 +186,8 @@
 					<br><br>
 					<label class="col-md-4 control-label" style="width:114px;float:left;">负责人：</label>
 					<div class="col-md-8" style="float: left">
-						<input type="text" class="form-control" name="staffName" value=""
-							placeholder="#">
+						<input type="text" class="form-control" name="staffName" value="${sessionScope.user.name}"
+							placeholder="#"  readonly="readonly">
 					</div>
 					<br><br>
 					

@@ -18,7 +18,7 @@ public interface UserMapper
 
 	public User get(String name);
 
-	public void update(User category);
+	public void update(User user);
 
 	public List<User> list();
 

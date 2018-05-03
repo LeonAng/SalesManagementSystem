@@ -7,9 +7,11 @@ import javax.servlet.http.HttpSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import leon.sms.mapper.InstructionMapper;
+import leon.sms.mapper.ProjectMapper;
 import leon.sms.pojo.Instruction;
 import leon.sms.pojo.Project;
 import leon.sms.pojo.User;
@@ -94,10 +96,6 @@ public class HomeController
 	{
 		ModelAndView mav = new ModelAndView();
 		mav.setViewName("home/mainFrame/analysis");
-		
-		
-		
-		
 		return mav;
 	}
 	
@@ -106,14 +104,26 @@ public class HomeController
 	{
 		ModelAndView mav = new ModelAndView();
 		mav.setViewName("home/mainFrame/adminDocumentary");
+		mav.addObject("list", projectService.getAll());
 		return mav;
 	}
 	
-	@RequestMapping("clientQuery")
+	@RequestMapping("others")
 	public ModelAndView clientQuery()
 	{
 		ModelAndView mav = new ModelAndView();
-		mav.setViewName("home/mainFrame/clientQuery");
+		mav.setViewName("home/mainFrame/others");
+		return mav;
+	}
+	
+	@RequestMapping("addInstruction")
+	public ModelAndView addInstruction(@RequestParam("adminName") String managerName,
+			@RequestParam("staffName") String staffName, @RequestParam("content") String content)
+	{
+		ModelAndView mav = new ModelAndView();
+		mav.setViewName("home/mainFrame/adminDocumentary");
+		Instruction in = new Instruction( staffName, managerName, content);
+		instructionMapper.add(in);
 		return mav;
 	}
 }

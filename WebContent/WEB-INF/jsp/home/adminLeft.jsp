@@ -42,7 +42,7 @@ body{
 			<li id="li3" onclick="changeStyle('li3')"><a target="mainFrame"
 				href="adminDocumentary">销售经理跟单</a></li>
 			<li id="li4" onclick="changeStyle('li4')"><a target="mainFrame"
-				href="clientQuery">客户项目查询</a></li>
+				href="others">其他功能</a></li>
 		</ul>
 	</div>
 </body>

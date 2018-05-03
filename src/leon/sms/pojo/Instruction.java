@@ -26,6 +26,13 @@ public class Instruction
 		this.managerName = managerName;
 		this.content = content;
 	}
+	public Instruction(String staffName, String managerName, String content)
+	{
+		super();
+		this.staffName = staffName;
+		this.managerName = managerName;
+		this.content = content;
+	}
 	@Override
 	public String toString()
 	{

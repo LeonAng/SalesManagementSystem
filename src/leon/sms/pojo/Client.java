@@ -10,23 +10,21 @@ public class Client
 {
 	private String name;
 	private String phoneNumber;
-	private int projectsNum;//完成的订单数
 	public Client()
 	{
 		super();
 	}
 	
-	public Client(String name, String phoneNumber, int projectsNum)
+	public Client(String name, String phoneNumber)
 	{
 		super();
 		this.name = name;
 		this.phoneNumber = phoneNumber;
-		this.projectsNum = projectsNum;
 	}
 	@Override
 	public String toString()
 	{
-		return "Client [name=" + name + ", phoneNumber=" + phoneNumber + ", projectsNum=" + projectsNum + "]";
+		return "Client [name=" + name + ", phoneNumber=" + phoneNumber + ", projectsNum="  + "]";
 	}
 
 	public String getName()
@@ -44,13 +42,5 @@ public class Client
 	public void setPhoneNumber(String phoneNumber)
 	{
 		this.phoneNumber = phoneNumber;
-	}
-	public int getProjectsNum()
-	{
-		return projectsNum;
-	}
-	public void setProjectsNum(int projectsNum)
-	{
-		this.projectsNum = projectsNum;
 	}
 }

@@ -6,9 +6,9 @@
 <mapper namespace="leon.sms.mapper.InstructionMapper">
 	<insert id="add" parameterType="leon.sms.pojo.Instruction">
 		insert into instructions
-		(id,staffname,managername,content)
+		(staffname,managername,content)
 		values
-		(#{id},#{staffName},#{managerName},#{content})
+		(#{staffName},#{managerName},#{content})
 	</insert>
 
 	<delete id="delete" parameterType="int">

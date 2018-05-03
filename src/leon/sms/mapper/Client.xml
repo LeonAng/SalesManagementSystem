@@ -6,9 +6,9 @@
 <mapper namespace="leon.sms.mapper.ClientMapper">
 	<insert id="add" parameterType="leon.sms.pojo.Client">
 		insert into clients
-		(name,phonenumber,projectsnum)
+		(name,phonenumber)
 		values
-		(#{name},#{phoneNumber},#{projectsNum})
+		(#{name},#{phoneNumber})
 	</insert>
 
 	<delete id="delete" parameterType="String">
@@ -23,7 +23,7 @@
 
 	<update id="update" parameterType="leon.sms.pojo.Client">
 		update clients set
-		phonenumber=#{phoneNumber},projectsnum=#{projectsNum}
+		phonenumber=#{phoneNumber}
 		where name= #{name}
 	</update>
 

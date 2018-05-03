@@ -23,6 +23,12 @@ public class ActionForDay
 		this.saleDate = saleDate;
 		this.number = number;
 	}
+	public ActionForDay(Date saleDate)
+	{
+		super();
+		this.saleDate = saleDate;
+	}
+	
 	@Override
 	public String toString()
 	{

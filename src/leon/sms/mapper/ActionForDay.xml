@@ -11,17 +11,17 @@
 
 	<delete id="delete" parameterType="java.sql.Date">
 		delete from actionforday where saledate=
-		#{date}
+		#{saleDate}
 	</delete>
 
 	<select id="get" parameterType="java.sql.Date" resultType="leon.sms.pojo.ActionForDay">
 		select * from
-		actionforday where saledate= #{date}
+		actionforday where saledate= #{saleDate}
 	</select>
 	
 	<update id="update" parameterType="leon.sms.pojo.ActionForDay">
 		update actionforday set
-		number=#{number} where saledate= #{date}
+		number=#{number} where saledate= #{saleDate}
 	</update>
 	
 	<select id="list" resultType="leon.sms.pojo.ActionForDay">
