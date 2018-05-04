@@ -6,7 +6,7 @@
 <mapper namespace="leon.sms.mapper.UserMapper">
 	<insert id="add" parameterType="leon.sms.pojo.User">
 		insert into users (name,password,isAdmin,projectsnum)
-		values (#{name},#{passWord},#{isAdmin},#{projectsNum})
+		values (#{name},MD5(#{passWord}),#{isAdmin},#{projectsNum})
 	</insert>
 
 	<delete id="delete" parameterType="String">

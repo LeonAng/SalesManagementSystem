@@ -6,12 +6,12 @@ use salesmanagementsystem;
 create table If Not Exists users
 (
 	name varchar(10) primary key not null,
-	password varchar(30) not null,
+	password varchar(50) not null,
 	isadmin boolean not null,/*是否是销售经理（管理员）*/
 	projectsnum int/*完成的订单数*/
 );
-insert into users values("leon","11235",false,1);
-insert into users values("admin","admin",true,0);
+insert into users values("leon",MD5(111111),false,1);
+insert into users values("admin",MD5("admin"),true,0);
 
 /*客户*/
 create table If Not Exists clients

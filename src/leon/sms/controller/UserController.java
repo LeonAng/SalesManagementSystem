@@ -36,7 +36,8 @@ public class UserController
 	{
 		//System.out.println(name + " "+ password);
 		
-		User user= new User(name,password);
+		User user= new User(name,userService.getMD5(password));
+		
 		ModelAndView mav = new ModelAndView();
 		if(userService.search(user)!=null)
 		{
