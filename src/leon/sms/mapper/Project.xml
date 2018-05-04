@@ -21,6 +21,11 @@
 		select * from
 		projects where id= #{id}
 	</select>
+	
+	<select id="findProjects" parameterType="String" resultType="leon.sms.pojo.Project">
+		select * from
+		projects where clientname= #{clientName}
+	</select>
 
 	<update id="update" parameterType="leon.sms.pojo.Project">
 		update projects set

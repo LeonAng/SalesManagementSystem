@@ -20,7 +20,7 @@
 		select * from
 		clients where name= #{name}
 	</select>
-
+	
 	<update id="update" parameterType="leon.sms.pojo.Client">
 		update clients set
 		phonenumber=#{phoneNumber}

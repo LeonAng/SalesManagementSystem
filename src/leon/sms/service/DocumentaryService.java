@@ -39,13 +39,13 @@ public class DocumentaryService
 		{
 			System.out.println("货物减少了");
 			goods.setNumber(goods.getNumber()-project.getGoodsNumber());
-			goodsMapper.update(goods);
+			goodsMapper.updateNum(goods);
 		}
 		if(project.getState().equals("已取消"))
 		{
 			System.out.println("货物增加了");
 			goods.setNumber(goods.getNumber()+project.getGoodsNumber());
-			goodsMapper.update(goods);
+			goodsMapper.updateNum(goods);
 		}
 		if(project.getState().equals("已完成"))
 		{

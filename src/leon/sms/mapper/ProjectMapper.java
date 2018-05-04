@@ -23,4 +23,6 @@ public interface ProjectMapper
 	public List<Project> list();
 
 	public int count();
+
+	public List<Project> findProjects(String clientName);
 }

@@ -37,7 +37,7 @@ public class TestConnection
 			System.out.println(list.get(i).toString());
 		}
 		
-		 mav.addObject("cs", list);
+		mav.addObject("cs", list);
 		mav.setViewName("user/loginFailure");
 		return mav;
 	}

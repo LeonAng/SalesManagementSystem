@@ -67,12 +67,14 @@ public class UserController
 		if(userService.addUser(user))
 		{
 			System.out.println("×¢²á³É¹¦");
+			mav.setViewName("user/registeSuccess");
 		}
 		else
 		{
 			System.out.println("×¢²áÊ§°Ü");
+			mav.setViewName("user/registeFailure");
 		}
-		mav.setViewName("user/loginFailure");
+		
 		return mav;
 	}
 	

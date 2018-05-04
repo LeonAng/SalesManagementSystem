@@ -18,6 +18,8 @@ public interface GoodsMapper
 
 	public Goods get(String name);
 
+	public void updateNum(Goods goods);
+	
 	public void update(Goods goods);
 
 	public List<Goods> list();
