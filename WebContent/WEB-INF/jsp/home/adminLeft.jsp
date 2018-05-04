@@ -33,8 +33,6 @@ body{
 <body>
 	<div style="padding: 10px;padding-left">
 		<ul class="nav nav-pills nav-stacked">
-			<li id="clock" style="font-size: 20px;margin-left: 30px;"></li>
-
 			<li id="li1" onclick="changeStyle('li1')" class="active"><a
 				target="mainFrame" href="homeMain">企业文化</a></li>
 			<li id="li2" onclick="changeStyle('li2')"><a target="mainFrame"
@@ -43,6 +41,7 @@ body{
 				href="adminDocumentary">销售经理跟单</a></li>
 			<li id="li4" onclick="changeStyle('li4')"><a target="mainFrame"
 				href="others">其他功能</a></li>
+			<li id="clock" style="font-size: 20px;margin-left: 10px;"></li>
 		</ul>
 	</div>
 </body>

@@ -90,14 +90,6 @@ public class HomeController
 		return mav;
 	}
 	
-	@RequestMapping("analysis")
-	public ModelAndView analysis()
-	{
-		ModelAndView mav = new ModelAndView();
-		mav.setViewName("home/mainFrame/analysis");
-		return mav;
-	}
-	
 	@RequestMapping("adminDocumentary")
 	public ModelAndView adminDocumentary()
 	{

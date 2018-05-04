@@ -12,4 +12,3 @@ function formSubmit (url,sTarget){
     document.forms[0].submit();
     return true;
 }
-
