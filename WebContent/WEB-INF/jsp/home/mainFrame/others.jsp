@@ -24,6 +24,19 @@
 			</fieldset>
 		</form>
 	</div>
+	
+	<div class="box">
+		<form action="addClient" method="post" accept-charset="utf-8" onsubmit="return check3()">
+			<fieldset>
+				<div align="center">
+					<h4>————新增客户————</h4>
+				</div>
+				<label>客户名</label> <input type="text" name="ClientName1"/><br> 
+				<label>手机号</label> <input type="text" name="ClientPhone"/><br>
+				<button type="submit" class="btn">提交</button>
+			</fieldset>
+		</form>
+	</div>
 
 	<div class="box">
 		<div align="center">
@@ -69,6 +82,8 @@
 		var goodsName = document.getElementsByName("goodsName")[0].value;
 		var goodsNumber = document.getElementsByName("goodsNumber")[0].value;
 		var unitPrice = document.getElementsByName("unitPrice")[0].value;
+		
+		
 		if (goodsName == "") {
 			alert("商品名不能为空！");
 			return false;
@@ -85,6 +100,18 @@
 		var clientName = document.getElementsByName("clientName")[0].value;
 		if (clientName == "") {
 			alert("客户姓名不能为空！");
+			return false;
+		}
+	}
+	
+	function check3() {
+		var ClientName1 = document.getElementsByName("ClientName1")[0].value;
+		var ClientPhone = document.getElementsByName("ClientPhone")[0].value;
+		if (ClientName1 == "") {
+			alert("客户姓名不能为空！");
+			return false;
+		}else if (ClientPhone == "") {
+			alert("号码不能为空！");
 			return false;
 		}
 	}
